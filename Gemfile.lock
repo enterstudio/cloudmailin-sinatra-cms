@@ -1,44 +1,78 @@
 GEM
   remote: http://rubygems.org/
   specs:
-    activesupport (2.3.8)
-    bson (1.0.4)
+    activemodel (7.0.4.3)
+      activesupport (= 7.0.4.3)
+    activesupport (7.0.4.3)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 1.6, < 2)
+      minitest (>= 5.1)
+      tzinfo (~> 2.0)
+    bson (4.15.0)
     bson_ext (1.0.4)
-    durran-validatable (2.0.1)
-    haml (3.0.16)
-    mail (2.2.5)
-      activesupport (>= 2.3.6)
-      mime-types
-      treetop (>= 1.4.5)
-    mime-types (1.16)
-    mongo (1.0.7)
-      bson (>= 1.0.4)
+    concurrent-ruby (1.2.2)
+    date (3.3.3)
+    haml (6.1.1)
+      temple (>= 0.8.2)
+      thor
+      tilt
+    i18n (1.12.0)
+      concurrent-ruby (~> 1.0)
+    mail (2.8.1)
+      mini_mime (>= 0.1.1)
+      net-imap
+      net-pop
+      net-smtp
+    mini_mime (1.1.2)
+    minitest (5.18.0)
+    mongo (2.18.2)
+      bson (>= 4.14.1, < 5.0.0)
     mongo_ext (0.19.3)
-    mongoid (1.9.1)
-      activesupport (<= 3.0.0)
-      bson (~> 1.0.1)
-      durran-validatable (>= 2.0.1)
-      mongo (~> 1.0.1)
-      will_paginate (< 2.9)
-    polyglot (0.3.1)
-    rack (1.2.1)
-    sinatra (1.0)
-      rack (>= 1.0)
+    mongoid (8.0.3)
+      activemodel (>= 5.1, < 7.1, != 7.0.0)
+      mongo (>= 2.18.0, < 3.0.0)
+      ruby2_keywords (~> 0.0.5)
+    mustermann (3.0.0)
+      ruby2_keywords (~> 0.0.1)
+    net-imap (0.3.4)
+      date
+      net-protocol
+    net-pop (0.1.2)
+      net-protocol
+    net-protocol (0.2.1)
+      timeout
+    net-smtp (0.3.3)
+      net-protocol
+    rack (2.2.6.4)
+    rack-protection (3.0.5)
+      rack
+    ruby2_keywords (0.0.5)
+    sinatra (3.0.5)
+      mustermann (~> 3.0)
+      rack (~> 2.2, >= 2.2.4)
+      rack-protection (= 3.0.5)
+      tilt (~> 2.0)
     sinatra-mongoid (0.0.2)
       mongo_ext
       mongoid
       sinatra
-    treetop (1.4.8)
-      polyglot (>= 0.3.1)
-    will_paginate (2.3.14)
+    temple (0.10.0)
+    thor (1.2.1)
+    tilt (2.1.0)
+    timeout (0.3.2)
+    tzinfo (2.0.6)
+      concurrent-ruby (~> 1.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   bson_ext
-  haml
-  mail
+  haml (>= 5.0.0)
+  mail (>= 2.5.5)
   mongoid
   sinatra
   sinatra-mongoid
+
+BUNDLED WITH
+   2.1.4
