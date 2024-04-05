@@ -2,6 +2,7 @@ GEM
   remote: http://rubygems.org/
   specs:
     activesupport (2.3.8)
+    base64 (0.2.0)
     bson (1.0.4)
     bson_ext (1.0.4)
     durran-validatable (2.0.1)
@@ -20,14 +21,27 @@ GEM
       durran-validatable (>= 2.0.1)
       mongo (~> 1.0.1)
       will_paginate (< 2.9)
+    mustermann (3.0.0)
+      ruby2_keywords (~> 0.0.1)
     polyglot (0.3.1)
-    rack (1.2.1)
-    sinatra (1.0)
-      rack (>= 1.0)
+    rack (3.0.10)
+    rack-protection (4.0.0)
+      base64 (>= 0.1.0)
+      rack (>= 3.0.0, < 4)
+    rack-session (2.0.0)
+      rack (>= 3.0.0)
+    ruby2_keywords (0.0.5)
+    sinatra (4.0.0)
+      mustermann (~> 3.0)
+      rack (>= 3.0.0, < 4)
+      rack-protection (= 4.0.0)
+      rack-session (>= 2.0.0, < 3)
+      tilt (~> 2.0)
     sinatra-mongoid (0.0.2)
       mongo_ext
       mongoid
       sinatra
+    tilt (2.3.0)
     treetop (1.4.8)
       polyglot (>= 0.3.1)
     will_paginate (2.3.14)
@@ -40,5 +54,8 @@ DEPENDENCIES
   haml
   mail
   mongoid
-  sinatra
+  sinatra (>= 2.0.0)
   sinatra-mongoid
+
+BUNDLED WITH
+   2.1.4
